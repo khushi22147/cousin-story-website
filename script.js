@@ -1,21 +1,23 @@
+ function playVideo(videoSrc) {
+  const modal = document.getElementById("videoModal");
+  const video = document.getElementById("popupVideo");
 
-        function playVideo(videoPath) {
-            const modal = document.getElementById("videoModal");
-            const video = document.getElementById("popupVideo");
+  video.src = videoSrc;
+  modal.style.display = "flex";
+  video.play();
+}
 
-        video.src = videoPath;
-        modal.style.display = "flex";
-        video.play();
-    }
+function closeVideo() {
+  const modal = document.getElementById("videoModal");
+  const video = document.getElementById("popupVideo");
 
-    function closeVideo() {
-        const modal = document.getElementById("videoModal");
-        const video = document.getElementById("popupVideo");
+  video.pause();
+  video.currentTime = 0;
+  video.src = "";
+  modal.style.display = "none";
+}
 
-        video.pause();
-        video.src = "";
-        modal.style.display = "none";
-    }
+
     
     document.querySelectorAll('.flip-card').forEach(card => {
     card.addEventListener('click', () => {
@@ -41,7 +43,3 @@ document.querySelectorAll('.flip-card').forEach(card => {
   });
 });
 
-<div id="videoModal" class="modal">
-        <span class="close" onclick="closeVideo()">×</span>
-        <video id="popupVideo" controls autoplay></video>
-    </div>

@@ -195,9 +195,9 @@
 
     <div class="highlights">
 
-        <div class="highlight">
+        <div class="highlight" onclick="playVideo('videos/yatra.mp4')">
             <img src="images/yatra.jpeg">
-            <span><button onclick="alart('hello')">Childhood</button></span>
+            <span>Childhood</span>
         </div>
 
         <div class="highlight" onclick="playVideo('videos/unplanned.mp4')">
@@ -205,44 +205,44 @@
             <span>Masti</span>
         </div>
 
-        <div class="highlight" onclick="playVideo('videos/Rainbow.mp4')">
+        <div class="highlight" onclick="playVideo('videos/rainbow.mp4')">
             <img src="images/rainbow.jpeg">
-            <span>Festivals</span>
+            <span>Rainbow</span>
         </div>
 
-        <div class="highlight" onclick="playVideo('videos/Outing.mp4')">
+        <div class="highlight" onclick="playVideo('videos/outing.mp4')">
         <img src="images/outing.jpeg">
-        <span>Festivals</span>
+        <span>Outing</span>
         </div>
 
         <div class="highlight" onclick="playVideo('videos/inner_child.mp4')">
         <img src="images/memories_recreate.jpeg">
-        <span>Festivals</span>
+        <span>Recreation</span>
         </div>
 
         <div class="highlight" onclick="playVideo('videos/sis_bond.mp4')">
         <img src="images/soul_sister.jpeg">
-        <span>Festivals</span>
+        <span>Sisters</span>
         </div>
 
         <div class="highlight" onclick="playVideo('videos/sitara.mp4')">
         <img src="images/sitara.jpeg">
-        <span>Festivals</span>
+        <span>Sitara</span>
         </div>
 
         <div class="highlight" onclick="playVideo('videos/ganpati2025.mp4')">
-        <img src="images/ganpati .jpeg">
-        <span>Festivals</span>
+        <img src="images/ganpati.jpeg">
+        <span>Ganpati</span>
         </div>
 
         <div class="highlight" onclick="playVideo('videos/Birthday_shopping.mp4')">
         <img src="images/birthday_shopping.jpeg">
-        <span>Festivals</span>
+        <span>Birthday_Shopping</span>
         </div>
 
         <div class="highlight" onclick="playVideo('videos/Last_birthday.mp4')">
         <img src="images/last_bithday2025.jpeg">
-        <span>Festivals</span>
+        <span>Last_Birthday</span>
         </div>
 
     
@@ -282,6 +282,11 @@
 
 
 
-  </div>
+  <div id="videoModal" class="modal">
+        <span class="close" onclick="closeVideo()">×</span>
+        <video id="popupVideo" controls playsinline></video>
+    </div>
+
+
 </body>
 </html>
